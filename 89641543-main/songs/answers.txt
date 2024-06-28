@@ -1,0 +1,17 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+Characterizing the audio aura based on the top 100 songs of a listener would provide an average representation of the energy,
+valence, and danceability present in their most frequently played music during that year. However, this approach might oversimplify the listener's
+emotional range and preferences since it doesn't consider variations in mood, genre diversity, or personal context across different periods or life events.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Faults: It overlooks mood changes over time.
+It may focus on specific genres, missing diversity in taste.
+Basic metrics like energy and valence oversimplify emotional experiences.
+
+Better methods could involve:
+
+Examining data over multiple years for evolving patterns.
+Using diverse emotional indicators like lyrics or user feedback.
+Incorporating specific user habits for a more tailored representation.

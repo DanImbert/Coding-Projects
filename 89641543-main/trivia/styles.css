@@ -1,0 +1,37 @@
+// Add JavaScript logic here
+const multipleChoiceButtons = document.querySelectorAll('.answer');
+const freeResponseInput = document.getElementById('freeResponse');
+const confirmButton = document.getElementById('confirmButton');
+
+// Multiple Choice Question Logic
+multipleChoiceButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedAnswer = button.getAttribute('data-answer');
+
+    multipleChoiceButtons.forEach(btn => {
+      btn.style.backgroundColor = '#d9edff'; // Reset all buttons to default color
+    });
+
+    if (selectedAnswer === 'correct') {
+      button.style.backgroundColor = '#5cb85c'; // Green color for correct answer
+      button.nextElementSibling.innerText = 'Correct!';
+    } else {
+      button.style.backgroundColor = '#d9534f'; // Red color for incorrect answer
+      button.nextElementSibling.innerText = 'Incorrect';
+    }
+  });
+});
+
+// Free Response Question Logic
+confirmButton.addEventListener('click', () => {
+  const userAnswer = freeResponseInput.value.toLowerCase().trim();
+  const correctAnswer = 'jupiter'; // Example correct answer
+
+  if (userAnswer === correctAnswer) {
+    freeResponseInput.style.backgroundColor = '#5cb85c'; // Green color for correct answer
+    freeResponseInput.nextElementSibling.innerText = 'Correct!';
+  } else {
+    freeResponseInput.style.backgroundColor = '#d9534f'; // Red color for incorrect answer
+    freeResponseInput.nextElementSibling.innerText = 'Incorrect';
+  }
+});
